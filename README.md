@@ -1,38 +1,78 @@
-# create-svelte
+# S3-Kit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Welcome to S3-Kit, a highly opinionated template for building applications with Svelte, Drizzle, LibSQL, Tailwind, and shadcn/ui.
 
-## Creating a project
+## Getting Started
 
-If you're seeing this, you've probably already done this step. Congrats!
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- You have installed Node.js and pnpm.
+- You have a `./.data/local.sqlite` file in your project root.
+
+### Installing S3-Kit
+
+To install S3-Kit, follow these steps:
+
+1. Clone the repo:
+    ```bash
+    git clone https://github.com/d3ciee/s3-kit.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd s3-kit
+    ```
+
+3. Install the dependencies:
+    ```bash
+    pnpm install
+    ```
+
+### Configuration
+
+1. Create a `.env` file in your project root and add your environment variables as described in `.env.example`.
+
+### Running Migrations
+
+To set up your database, run the following commands:
+
+1. Generate migrations:
+    ```bash
+    pnpm migrations:generate
+    ```
+
+2. Push migrations:
+    ```bash
+    pnpm migrations:push
+    ```
+
+## Usage
+
+After following these steps, you should be able to start the development server:
 
 ```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+pnpm run dev
 ```
 
-## Developing
+## Contributing to S3-Kit
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To contribute to S3-Kit, follow these steps:
 
-```bash
-npm run dev
+1. Fork the repository.
+2. Create a new branch: `git checkout -b <branch_name>`.
+3. Make your changes and commit them: `git commit -m '<commit_message>'`
+4. Push to the original branch: `git push origin <project_name>/<location>`
+5. Create the pull request.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+## Contact
+
+If you want to contact me, you can reach me at `decefemz@gmail.com`.
+
+## License
+
+This project uses the following license: `MIT`.
 ```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
